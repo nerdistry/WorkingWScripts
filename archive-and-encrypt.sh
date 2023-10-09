@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-name=$1
-path=$2
+
+name=simple_file
+path=/testing_scripts
+
+# Check if the path exists
+if [ ! -e "$path" ]; then
+    echo "Error: The path '$path' does not exist."
+    exit 1
+fi
+
 tar -czvf "$name.tar.gz" "$path"
 gpg -c "$name.tar.gz"
 rm -rf "$name.tar.gz"
