@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-name=simple_file
+name=simple_file.txt
 path=/testing_scripts
 
 # Check if the path exists
